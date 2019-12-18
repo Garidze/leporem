@@ -1,0 +1,261 @@
+*,
+	margin: 0
+	padding: 0
+	// border: 1px solid red
+a
+	text-decoration: none
+	color: #000
+li
+	list-style-type: none
+@font-face
+	font-family: lte50336
+	src: url(../fonts/lte50336.ttf)
+@font-face
+	font-family: FuturaLT-Book
+	src: url(../fonts/FuturaLT-Book.ttf)
+// header/////////////////////////////////
+header
+	width: 100%
+	height: 106px
+	background: gold
+header, #logo,#menu, #menu ul, #menu ul li, #logIn
+	display: flex
+#logo
+	font-size: 65px
+	font-family: 'Lobster', cursive
+	width: 30%
+	padding: 0.8% 3% 0 0
+	box-sizing: border-box
+	height: 100%
+	justify-content: flex-end
+#logo a
+	color: red
+#menu
+	width: 40%
+#menu ul
+	width: 100%
+#menu ul li, #logIn
+	justify-content: center
+	align-items: center
+#menu ul li
+	width: 25%
+	font-size: 25px
+	font-family: lte50336
+	font-style: bold
+#menu ul li:first-child
+	margin-left: 3%
+#logIn
+	width: 30%
+	font-size: 18px
+	font-family: 'Forum', cursive
+#logIn img
+	border-radius: 50%
+	width: 30px
+	height: 30px
+	margin: 0 10px
+
+// videoblock////////////////////////////////////
+.videoWrap
+	width: 100%
+	height: calc(100vh - 106px)
+	background: #ccc
+	position: relative
+	display: flex
+video
+	object-fit: cover
+	width: 100%
+	height: 100%
+#descBlock
+	position: absolute
+	width: 100%
+	height: 100%
+	color: #FF0000
+#descBlock div
+	font: normal normal normal 3vw/1.34em FuturaLT-Book, sans-serif
+	font-weight: bold
+	max-width: 980px
+	padding: 6.5% 0 0 0
+	margin: 0 auto
+
+// features container(fts)////////////////////////////////////////////////////////
+.container, .ftsBlock
+	display: flex
+.container
+	max-width: 980px
+	margin: 0 auto
+	border: 1px solid red
+	flex-wrap: wrap
+	justify-content: space-between
+.ftsBlock
+	flex-direction: column
+	width: 33%
+.ftsBlock_title
+	height: 145px
+	min-width: 230px
+	text-align: center
+	font-family: 'Cinzel', serif
+	font-size: 35px
+	color: #E21C21
+	font-weight: bold
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 1080px)
+	#menu ul li
+		width: 33%
+
+@media screen and (max-width: 980px)
+	#menu ul
+		flex-direction: column
+		width: 100%
+	#menu ul li
+		width: 100%
+	#menu ul li a
+		border-bottom: 1px solid #000
+	#menu ul li:first-child
+		margin-left: 0
+	#descBlock div
+		padding: 6.5% 0 0 6%
+@media screen and (max-width: 840px)
+	header
+		flex-direction: column
+		height: auto
+		justify-content: center
+		align-items: center
+	.ftsBlock
+		width: 50%
+	#logIn img
+		margin: 0
+	#logo
+		width: 100%
+	#logo a
+		text-align: center
+		width: 100%
+	#menu ul li a
+		border-bottom: 1px solid #000
+
+@media screen and (max-width: 420px)
+	#descBlock div
+		font: normal normal normal 5vw/1.34em FuturaLT-Book, sans-serif
+
+
+
+////file-field///////////////////////////////////////////////
+
+/////////////////////////////////////////////////////////////
+//video, img - fit///////////////////////////////////////////
+// video
+// 	object-fit: cover
+// 	width: 100%
+// 	height: 100%
+/////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////
+//MEDIA-REQUESTS/////////////////////////////////////////////
+// @media screen and (max-width: 730px)
+// 	.deckBlock
+// 		width: 75%
+// 	.news
+// 		width: 75%
+////////////////////////////////////////////////////////////
+
+
+////////////////////////////////////////////////////////////////////		
+///Подключение скачанного шрифта
+////////////////////////////////////////////////////////////////////
+// @font-face
+// 	font-family: IntroHeadR-Base
+// 	src: url(../fonts/IntroHeadR-Base.otf) format("opentype")
+/////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////
+//fade-effect and keyframes
+/////////////////////////////////////////////////////////////////////
+// .fade
+// 	animation-name: fade
+// 	animation-duration: 1s
+// @keyframes fade
+// 	from
+// 		opacity: 0
+// 	to
+// 		opacity: 1
+//////////////////////////////////////////////////////////////////////
+
+
+//////////////////////////////////////////////////////////////////////
+// @mixin cont 
+// 	content: ''
+// @include cont
+////////////////////////////////////////////////////////////////////
+// @media screen and (max-width: 640px)
+// 	#a_1
+// 		font-size: 40px
+// 	.menu_drop a
+// 		font-size: 25px
+// 		margin-left: -12px	
+/////////////////////////////////////////////////////////////////////
+// transition: all 0.5s ease-out
+// transition: 0.5s opacity
+// box-shadow: 0 0 10px rgba(0,0,0,0.5)
+//////////////////////////////////////////////////////////////////
+// background: url(../img/three.jpg) no-repeat center top / cover
+// background-attachment: fixed
+///////////////////////////////////////////////////////////////////
+// background-image: url(../img/mainbgr.jpg)
+// background-position: center top
+// background-repeat: no-repeat
+// background-size: cover
+/////////////////////////////////////////////////////////////////
+// transform: translate(200%)
+// background: rgba(255, 255, 255, .5)
+// transform: translate(200%)
+///////////////////////////////////////////////////////////////////////
+
+
+//////////////////////////////////////////////////////////
+// Гриды
+///////////////////////////////////////////////////////////
+// Для обвертки
+// display: grid
+// grid-template-rows: 1fr 1fr 1fr
+// grid-template-columns: 1fr 1fr 1fr
+// grid-gap: 2vw
+// grid-template-areas: 'header header header' 'content content content' 'footer footer footer'
+///////////////////////////////////////
+// Для содержимого объвертки
+// #pageHeader
+// 	grid-area: header
+//
+// #pageFooter
+// 	grid-area: footer
+//
+// #mainArticle
+// 	grid-area: article
+///////////////////////////////////////
+// grid-template-columns: repeat(auto-fill, minmax(150px, 1fr))
+// grid-template-rows: repeat(auto-fill, minmax(150px, 1fr))
+//
+// grid-auto-rows: 60px
+// grid-auto-flow: column
+// grid-auto-columns: 60px
+//
+// @media screen and (max-width: 560px)
+// 	.wrapper
+// 		grid-template-rows: 9vmin 1fr 9vmin
+// 		grid-template-columns: repeat(2, 1fr)
+// 		grid-template-areas: 'header header' 'content content' 'footer footer'
+// 	.inner
+// 		grid-template-columns: 1fr
+////////////////////////////////////////////////////////////////////////////////

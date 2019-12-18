@@ -1,0 +1,200 @@
+* {
+  margin: 0;
+  padding: 0; }
+
+a {
+  text-decoration: none;
+  color: #000; }
+
+li {
+  list-style-type: none; }
+
+@font-face {
+  font-family: lte50336;
+  src: url(../fonts/lte50336.ttf); }
+
+@font-face {
+  font-family: FuturaLT-Book;
+  src: url(../fonts/FuturaLT-Book.ttf); }
+
+header {
+  width: 100%;
+  height: 106px;
+  background: gold; }
+
+header, #logo, #menu, #menu ul, #menu ul li, #logIn {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex; }
+
+#logo {
+  font-size: 65px;
+  font-family: 'Lobster', cursive;
+  width: 30%;
+  padding: 0.8% 3% 0 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  height: 100%;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+      -ms-flex-pack: end;
+          justify-content: flex-end; }
+
+#logo a {
+  color: red; }
+
+#menu {
+  width: 40%; }
+
+#menu ul {
+  width: 100%; }
+
+#menu ul li, #logIn {
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center; }
+
+#menu ul li {
+  width: 25%;
+  font-size: 25px;
+  font-family: lte50336;
+  font-style: bold; }
+
+#menu ul li:first-child {
+  margin-left: 3%; }
+
+#logIn {
+  width: 30%;
+  font-size: 18px;
+  font-family: 'Forum', cursive; }
+
+#logIn img {
+  -webkit-border-radius: 50%;
+          border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  margin: 0 10px; }
+
+.videoWrap {
+  width: 100%;
+  height: -webkit-calc(100vh - 106px);
+  height: calc(100vh - 106px);
+  background: #ccc;
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex; }
+
+video {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  height: 100%; }
+
+#descBlock {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  color: #FF0000; }
+
+#descBlock div {
+  font: normal normal normal 3vw/1.34em FuturaLT-Book, sans-serif;
+  font-weight: bold;
+  max-width: 980px;
+  padding: 6.5% 0 0 0;
+  margin: 0 auto; }
+
+.container, .ftsBlock {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex; }
+
+.container {
+  max-width: 980px;
+  margin: 0 auto;
+  border: 1px solid red;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between; }
+
+.ftsBlock {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 33%; }
+
+.ftsBlock_title {
+  height: 145px;
+  min-width: 230px;
+  text-align: center;
+  font-family: 'Cinzel', serif;
+  font-size: 35px;
+  color: #E21C21;
+  font-weight: bold; }
+
+@media screen and (max-width: 1080px) {
+  #menu ul li {
+    width: 33%; } }
+
+@media screen and (max-width: 980px) {
+  #menu ul {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 100%; }
+  #menu ul li {
+    width: 100%; }
+  #menu ul li a {
+    border-bottom: 1px solid #000; }
+  #menu ul li:first-child {
+    margin-left: 0; }
+  #descBlock div {
+    padding: 6.5% 0 0 6%; } }
+
+@media screen and (max-width: 840px) {
+  header {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    height: auto;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center; }
+  .ftsBlock {
+    width: 50%; }
+  #logIn img {
+    margin: 0; }
+  #logo {
+    width: 100%; }
+  #logo a {
+    text-align: center;
+    width: 100%; }
+  #menu ul li a {
+    border-bottom: 1px solid #000; } }
+
+@media screen and (max-width: 420px) {
+  #descBlock div {
+    font: normal normal normal 5vw/1.34em FuturaLT-Book, sans-serif; } }
