@@ -13,12 +13,15 @@ li
 @font-face
 	font-family: FuturaLT-Book
 	src: url(../fonts/FuturaLT-Book.ttf)
+@font-face
+	font-family: AvenirLT-Light
+	src: url(../fonts/AvenirLT-Light.ttf)
 // header/////////////////////////////////
 header
 	width: 100%
 	height: 106px
 	background: gold
-header, #logo,#menu, #menu ul, #menu ul li, #logIn
+header, #logo,#menu, #menu ul, #menu ul li, #logIn, .videoWrap, .whyWe, .wBlock,.haircut, .maleFemale
 	display: flex
 #logo
 	font-size: 65px
@@ -34,11 +37,11 @@ header, #logo,#menu, #menu ul, #menu ul li, #logIn
 	width: 40%
 #menu ul
 	width: 100%
-#menu ul li, #logIn
+#logIn, #menu ul li
 	justify-content: center
 	align-items: center
 #menu ul li
-	width: 25%
+	width: 32%
 	font-size: 25px
 	font-family: lte50336
 	font-style: bold
@@ -60,7 +63,6 @@ header, #logo,#menu, #menu ul, #menu ul li, #logIn
 	height: calc(100vh - 106px)
 	background: #ccc
 	position: relative
-	display: flex
 video
 	object-fit: cover
 	width: 100%
@@ -76,27 +78,84 @@ video
 	max-width: 980px
 	padding: 6.5% 0 0 0
 	margin: 0 auto
-
-// features container(fts)////////////////////////////////////////////////////////
-.container, .ftsBlock
-	display: flex
-.container
+//aligment////////////////////////////////////////////////////////
+.aligment
 	max-width: 980px
-	margin: 0 auto
-	border: 1px solid red
+	margin: 0 auto	
+//whyWe(w)////////////////////////////////////////////////////////
+.whyWe
+	// border: 1px solid red
 	flex-wrap: wrap
 	justify-content: space-between
-.ftsBlock
+.whyWe h1
+	width: 100%
+	text-align: center
+	font-size: 73px
+	font-family: FuturaLT-Book
+	color: #EBB70C
+	font-weight: 100
+	margin-top: 50px
+.wBlock
 	flex-direction: column
 	width: 33%
-.ftsBlock_title
-	height: 145px
-	min-width: 230px
+	// border: 1px solid red
+.wBlock_title
+	height: 115px
+	// min-width: 230px
 	text-align: center
 	font-family: 'Cinzel', serif
-	font-size: 35px
+	font-size: 33px
 	color: #E21C21
-	font-weight: bold
+	font-weight: 1000
+	line-height: 1em
+	letter-spacing: 0.03em
+.wBlock_desc
+	font-family: DINNextW01-Light;
+	text-align: center
+	font-size: 22px
+
+//our services////////////////////////////////////////////////////////////
+.ourSevices
+	padding: 150px 0
+	text-align: center
+.ourSevices h1
+	padding: 30px 0
+	font-size: 40px
+	font-family: FuturaLT-Book
+	font-weight: 200
+.ourSevices h3
+	font-family: 'Dancing Script', cursive
+	font-weight: 100
+
+//our services////////////////////////////////////////////////////////////
+//haircut/////////////////////////////////////////////////////////////////
+.haircut
+	flex-wrap: wrap
+	justify-content: space-between
+.maleFemale
+	flex-direction: column
+	width: 48%
+	padding: 5px
+.maleFemale img
+	width: 100%
+	// height: auto
+	// object-fit: fill
+.maleFemale h2
+	font-family: FuturaLT-Book
+	font-weight: 200
+	padding: 30px 0
+.maleFemale h3
+	color: #2A2A2A
+	font-family: AvenirLT-Light
+	font-weight: 100
+	line-height: 2em
+	height: 100%
+.maleFemale a
+	border: 1px solid #000
+	width: 142px
+	height: 40px
+	text-align: center
+	line-height: 40px
 
 
 
@@ -104,36 +163,40 @@ video
 
 
 
-
-
-
-
-
-
-@media screen and (max-width: 1080px)
-	#menu ul li
-		width: 33%
 
 @media screen and (max-width: 980px)
-	#menu ul
-		flex-direction: column
-		width: 100%
-	#menu ul li
-		width: 100%
+	#logIn
+		margin: 15px 0
+	#menu ul li:nth-child(2)
+		width: 20%
+
 	#menu ul li a
 		border-bottom: 1px solid #000
 	#menu ul li:first-child
 		margin-left: 0
+		width: 40%
+	#menu ul li:last-child
+		width: 40%
+	.whyWe h1
+		font-size: 58px
 	#descBlock div
 		padding: 6.5% 0 0 6%
+
 @media screen and (max-width: 840px)
 	header
 		flex-direction: column
 		height: auto
 		justify-content: center
 		align-items: center
-	.ftsBlock
+	#menu
+		width: 100%
+	.whyWe h1
+		font-size: 44px
+	.wBlock
 		width: 50%
+		margin: 0 auto
+	.wBlock_title
+		height: 95px
 	#logIn img
 		margin: 0
 	#logo
@@ -147,6 +210,8 @@ video
 @media screen and (max-width: 420px)
 	#descBlock div
 		font: normal normal normal 5vw/1.34em FuturaLT-Book, sans-serif
+	.wBlock_title
+		font-size: 20px
 
 
 
