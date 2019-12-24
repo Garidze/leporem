@@ -175,10 +175,11 @@ video {
   -webkit-flex-wrap: wrap;
       -ms-flex-wrap: wrap;
           flex-wrap: wrap;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-      -ms-flex-pack: justify;
-          justify-content: space-between; }
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center; }
 
 .maleFemale {
   -webkit-box-orient: vertical;
@@ -195,7 +196,8 @@ video {
 .maleFemale h2 {
   font-family: FuturaLT-Book;
   font-weight: 200;
-  padding: 30px 0; }
+  padding: 30px 0;
+  text-align: left; }
 
 .maleFemale h3 {
   color: #2A2A2A;
@@ -212,14 +214,15 @@ video {
   line-height: 40px; }
 
 .bookNow {
-  padding: 100px 0;
+  padding: 100px 5px;
   font-family: AvenirLT-Light;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -webkit-flex-direction: column;
       -ms-flex-direction: column;
           flex-direction: column;
-  font-size: 15px; }
+  font-size: 15px;
+  text-align: center; }
 
 #bookNowBtn {
   width: 177px;
@@ -230,31 +233,49 @@ video {
   margin-top: 75px;
   font-weight: bold; }
 
+#bookNowBtn:hover {
+  cursor: pointer;
+  background: #000;
+  color: gold; }
+
 .fSlider {
+  position: relative; }
+
+.fSlider img {
+  max-width: 100%;
+  height: auto; }
+
+.windowSlider {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  overflow: hidden; }
-
-.fSlider img {
-  max-width: 100%; }
+  position: absolute;
+  top: 0;
+  left: 0; }
 
 .imgBlock {
   position: relative;
-  margin: 0 auto; }
+  background: rgba(128, 128, 0, 0.7); }
 
 .bgr {
+  position: absolute;
   width: 100%;
   height: 100%;
-  position: absolute;
-  background: rgba(128, 128, 0, 0.5);
   top: 0;
   left: 0; }
+
+#rButton, #lButton {
+  position: absolute;
+  top: 50%;
+  font-size: 50px; }
+
+#rButton {
+  right: 0; }
+
+#lButton {
+  left: 0;
+  z-index: 999; }
 
 @media screen and (max-width: 980px) {
   #logIn {
@@ -306,7 +327,12 @@ video {
     text-align: center;
     width: 100%; }
   #menu ul li a {
-    border-bottom: 1px solid #000; } }
+    border-bottom: 1px solid #000; }
+  .wPeople {
+    text-align: left;
+    padding: 10% 0 20px 5%; }
+  .sPeople {
+    padding: 4% 0 0 5%; } }
 
 @media screen and (max-width: 420px) {
   #descBlock div {
