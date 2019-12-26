@@ -1,6 +1,15 @@
 let imgSize = document.getElementById('imgSize');
 let imgBlock = document.getElementsByClassName('imgBlock');
+let fSlider = document.getElementsByClassName('fSlider');
+let imgWrap = document.getElementsByClassName('imgWrap');
 setImgSize();
+setImgWrapSize();
+function setImgWrapSize(){
+	for(let i = 0; i < imgWrap.length; i++){
+		imgWrap[i].style.width = fSlider[0].clientWidth + 'px';
+	}
+	
+}
 function setImgSize() {
 	for(let i = 0; i < imgBlock.length; i++){
 	imgBlock[i].style.width = imgSize.width + 'px';	
@@ -8,6 +17,7 @@ function setImgSize() {
 }
 window.onresize = function(event) {
     setImgSize();
+    setImgWrapSize();
 };
 
 

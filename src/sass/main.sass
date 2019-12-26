@@ -181,15 +181,22 @@ video
 //fSlider/////////////////////////////////////////////////////
 .fSlider
 	position: relative
+	width: 100%
 	// overflow: hidden
 .fSlider img
-	max-width: 100%
+	width: 100%
 	height: auto
 .windowSlider
 	display: flex
 	position: absolute
 	top: 0
 	left: 0
+.imgWrap
+	display: flex
+	justify-content: center
+	position: relative
+	margin: 0 auto
+	text-align: center
 .imgBlock
 	position: relative
 	background: rgba(128,128,0, .7)
@@ -199,12 +206,15 @@ video
 	height: 100%
 	top: 0
 	left: 0
+	z-index: 998
 #rButton, #lButton
 	position: absolute
+	margin: 0 5%
 	top: 50%
 	font-size: 50px
 #rButton
 	right: 0
+	z-index: 999
 #lButton
 	left: 0
 	z-index: 999
