@@ -197,6 +197,7 @@ video
 	position: relative
 	margin: 0 auto
 	text-align: center
+
 .imgBlock
 	position: relative
 	background: rgba(128,128,0, .7)
@@ -212,12 +213,52 @@ video
 	margin: 0 5%
 	top: 50%
 	font-size: 50px
+	z-index: 998
 #rButton
 	right: 0
-	z-index: 999
 #lButton
 	left: 0
 	z-index: 999
+.wPeopleSay
+	position: absolute
+	top: 10%
+	left: 0
+	z-index: 999
+	display: flex
+	align-items: flex-end
+	width: 80%
+	height: 100%
+	flex-direction: column
+	color: #fff
+.wPeopleSay h3, span, h4
+	font-family: 'Libre Baskerville', serif
+	width: 40%
+	text-align: left
+	padding: 20px 0
+.wPeopleSay h3, h4
+	font-weight: 100
+.wPeopleSay h3
+	letter-spacing: 0.3em
+	font-size: 1vw
+	position: relative
+.wPeopleSay h3:before
+	content: ''
+	width: 8%
+	border: 1px solid white
+	position: absolute
+	bottom: 0
+// .wPeopleSay:nth-child(1)
+// 	color: #000
+.wPeopleSay span
+	font-size: 2.1vw
+	letter-spacing: 0.05em
+.wPeopleSay h4
+	font-size: 1.2vw	
+	font-style: italic
+
+
+
+
 
 @media screen and (max-width: 980px)
 	#logIn

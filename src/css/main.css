@@ -284,15 +284,66 @@ video {
   position: absolute;
   margin: 0 5%;
   top: 50%;
-  font-size: 50px; }
+  font-size: 50px;
+  z-index: 998; }
 
 #rButton {
-  right: 0;
-  z-index: 999; }
+  right: 0; }
 
 #lButton {
   left: 0;
   z-index: 999; }
+
+.wPeopleSay {
+  position: absolute;
+  top: 10%;
+  left: 0;
+  z-index: 999;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+  -webkit-align-items: flex-end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  width: 80%;
+  height: 100%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  color: #fff; }
+
+.wPeopleSay h3, span, h4 {
+  font-family: 'Libre Baskerville', serif;
+  width: 40%;
+  text-align: left;
+  padding: 20px 0; }
+
+.wPeopleSay h3, h4 {
+  font-weight: 100; }
+
+.wPeopleSay h3 {
+  letter-spacing: 0.3em;
+  font-size: 1vw;
+  position: relative; }
+
+.wPeopleSay h3:before {
+  content: '';
+  width: 8%;
+  border: 1px solid white;
+  position: absolute;
+  bottom: 0; }
+
+.wPeopleSay span {
+  font-size: 2.1vw;
+  letter-spacing: 0.05em; }
+
+.wPeopleSay h4 {
+  font-size: 1.2vw;
+  font-style: italic; }
 
 @media screen and (max-width: 980px) {
   #logIn {
