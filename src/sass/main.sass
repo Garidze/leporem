@@ -1,7 +1,7 @@
 *,
 	margin: 0
 	padding: 0
-	border: 1px solid red
+	// border: 1px solid red
 a
 	text-decoration: none
 	color: #000
@@ -132,7 +132,7 @@ video
 .haircut
 	flex-wrap: wrap
 	justify-content: center
-	text-align: center
+	// text-align: center
 .maleFemale
 	flex-direction: column
 	width: 48%
@@ -166,6 +166,10 @@ video
 	flex-direction: column
 	font-size: 15px
 	text-align: center
+.bookNow h4
+	width: 100%
+	font-family: AvenirLT-Light
+	text-align: center
 #bookNowBtn
 	width: 177px
 	height: 40px
@@ -182,7 +186,7 @@ video
 .fSlider
 	position: relative
 	width: 100%
-	// overflow: hidden
+	overflow: hidden
 .fSlider img
 	width: 100%
 	height: auto
@@ -190,14 +194,15 @@ video
 	display: flex
 	position: absolute
 	top: 0
-	left: 0
+	left: 0%
+	transition: all 0.5s ease-out
 .imgWrap
 	display: flex
 	justify-content: center
 	position: relative
 	margin: 0 auto
 	text-align: center
-
+	transform: matrix(1,0,0,1,0,0)
 .imgBlock
 	position: relative
 	background: rgba(128,128,0, .7)
@@ -216,9 +221,18 @@ video
 	z-index: 998
 #rButton
 	right: 0
+	border-radius: 0 3px 3px 0
 #lButton
 	left: 0
-	z-index: 999
+	z-index: 1000
+	border-radius: 3px 0 0 3px
+#rButton:hover
+	cursor: pointer
+	background: rgba(255,255,255, .3)
+	z-index: 1000
+#lButton:hover
+	cursor: pointer
+	background: rgba(255,255,255, .3)
 .wPeopleSay
 	position: absolute
 	top: 10%
@@ -256,7 +270,11 @@ video
 	font-size: 1.2vw	
 	font-style: italic
 
-
+.dot
+	width: 50px
+	height: 50px
+	background: #000
+	border-radius: 50%
 
 
 

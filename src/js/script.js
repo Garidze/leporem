@@ -1,38 +1,67 @@
-let imgSize = document.getElementById('imgSize');
-let imgBlock = document.getElementsByClassName('imgBlock');
-let fSlider = document.getElementsByClassName('fSlider');
-let imgWrap = document.getElementsByClassName('imgWrap');
+let imgSize = document.getElementById('imgSize'),
+	imgBlock = document.getElementsByClassName('imgBlock'),
+	fSlider = document.getElementsByClassName('fSlider'),
+	windowSlider = document.getElementsByClassName('windowSlider'),
+	imgWrap = document.getElementsByClassName('imgWrap'),
+	lButton = document.getElementById('lButton'),
+	rButton = document.getElementById('rButton'),
+	amountSlides = imgWrap.length,
+	maxSlideMove = (imgWrap.length - 1) * -100,
+	currentImgNum = 0;
+
 setImgSize();
 setImgWrapSize();
+
 function setImgWrapSize(){
 	for(let i = 0; i < imgWrap.length; i++){
 		imgWrap[i].style.width = fSlider[0].clientWidth + 'px';
 	}
 	
 }
+
 function setImgSize() {
 	for(let i = 0; i < imgBlock.length; i++){
 	imgBlock[i].style.width = imgSize.width + 'px';	
+	}
 }
-}
+
 window.onresize = function(event) {
     setImgSize();
     setImgWrapSize();
 };
 
+function resetCountImg(){
+	if(currentImgNum < maxSlideMove) {
+		currentImgNum = 0;
+	}
+	if(currentImgNum > 0) {
+		currentImgNum = maxSlideMove;
+	}
+}
 
+function fsldBtnNext(){
+	currentImgNum += -100;
+	resetCountImg();
+	windowSlider[0].style.left = currentImgNum + '%';
+	console.log(currentImgNum);
+}
 
+function fsldBtnPrev(){
+	currentImgNum -= -100;
+	resetCountImg();
+	windowSlider[0].style.left = currentImgNum + '%';
+	console.log(currentImgNum);
+}
 
+rButton.onclick = function(){
+	fsldBtnNext();
+}
 
+lButton.onclick = function(){
+	fsldBtnPrev();
+}
 
-
-
-
-
-
-
-
-
+// dots///////////////////////////////////////////////////////////////
 
 
 
